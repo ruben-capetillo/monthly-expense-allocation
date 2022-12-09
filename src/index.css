@@ -1,0 +1,210 @@
+:root {
+	--base-green: #25a18e;
+	--secondary-green: #004e64;
+	--base-white: #f0ecec;
+	--base-red: rgb(214, 35, 35);
+	--base-onion: #dad8d8;
+	--base-smoke: #8197b4;
+	--base-dark: #979ca3;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: var(--base-onion);
+}
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	list-style: none;
+}
+
+h1 {
+	font-size: 4rem;
+}
+h2 {
+	font-size: 3rem;
+}
+
+.defshadow {
+	box-shadow: 0px 15px 15px -15px rgba(0, 0, 0, 0.5);
+	background-color: var(--base-white);
+	padding: 5rem;
+	border-radius: 1.5rem;
+}
+
+.header {
+	background-color: var(--base-green);
+}
+
+.header__title {
+	padding: 3rem 0;
+	margin: 0;
+	color: var(--base-white);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.form {
+	width: 95%;
+	margin: 0 auto;
+	padding: 10rem 0;
+}
+
+.form__field {
+	display: grid;
+	margin-bottom: 1rem;
+}
+
+.form label {
+	color: var(--base-green);
+	font-size: 2.4rem;
+	text-align: center;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+}
+
+.form input[type='text'],
+.form input[type='number'] {
+	background-color: var(--base-onion);
+	border-radius: 1rem;
+	padding: 1rem;
+	border: none;
+	flex: 1;
+	font-size: 1.6rem;
+}
+.reset-app,
+.form input[type='submit'] {
+	background-color: var(--base-green);
+	border: none;
+	border-radius: 1rem;
+	padding: 1rem;
+	text-align: center;
+	margin-top: 2rem;
+	color: var(--base-white);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	width: 100%;
+	transition: all 0.3s ease;
+}
+
+.container {
+	width: 90%;
+	max-width: 70rem;
+	margin: 0 auto;
+}
+.container-expense {
+	margin-top: -8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transform: translateY(5rem);
+}
+
+.container-allocation {
+	width: 100%;
+}
+.container-allocation p {
+	font-weight: 400;
+	color: var(--base-dark);
+	font-size: 2.4rem;
+	text-align: center;
+}
+
+.container-allocation span {
+	font-weight: 900;
+	color: var(--base-green);
+}
+.reset-app {
+	border: none;
+	background-color: #db2777;
+	padding: 1rem;
+	width: 100%;
+	text-align: center;
+	color: var(--base-white);
+	text-transform: uppercase;
+	font-weight: 900;
+	border-radius: 1rem;
+	transition-property: background-color;
+	transition-duration: 300ms;
+}
+.reset-app:hover {
+	background-color: #c71465;
+	cursor: pointer;
+}
+
+main {
+	padding-top: 10rem;
+}
+
+.list-expenses {
+	margin-top: 10rem;
+}
+.list-expenses h2 {
+	color: var(--base-dark);
+	font-weight: 900;
+}
+
+.expense {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 2rem;
+	width: 100%;
+}
+.expense-content {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+.expense-resume p {
+	margin: 0 0 0.3rem 0;
+}
+.expense-resume .departament {
+	color: var(--base-smoke);
+	font-size: 1.6rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+.expense-resume p {
+	margin-bottom: 1rem;
+}
+.expense-resume .expense-allocation {
+	color: var(--base-dark);
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.expense-resume .expense-allocation:hover {
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.form input[type='submit'] {
+		display: block;
+		padding: 1rem 5rem;
+	}
+}
+.form input[type='submit']:hover {
+	background-color: var(--secondary-green);
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.container-allocation p {
+		text-align: left;
+	}
+}
+
+@media (min-width: 768px) {
+	.form {
+		padding: 5rem 0;
+		width: 60rem;
+	}
+}
